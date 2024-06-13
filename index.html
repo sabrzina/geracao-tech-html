@@ -1,32 +1,128 @@
-<!DOCTYPE html> <!--Estou treinando inglês, então toda a página estará na língua inglesa. Agradeço a compreensão :)-->
-<html> <!--Tag base para todo elemento HTML.-->
-    <head> <!--Faz parte do "esqueleto" do HTML. É a cabeça, a parte que define os atributos da página para SEO, como aparecerá no navegador, etc.-->
+<!DOCTYPE html> <!--Feito mudanças em relação à versão 1 para se aplicar a um assunto específico.-->
+<html>
+    <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Judo Page</title>
+        <style>
+            :root {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-image: linear-gradient(to bottom, rgb(180, 180, 180), white);
+            }
+
+            body {
+                margin: 0;
+                text-align: center;
+            }
+
+            #header1 {
+                background-color: rgb(145, 30, 30);
+                margin: 0;
+                margin-bottom: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            #title {
+                margin: 0;
+            }
+
+            #nav-header ul li a {
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                font-size: large;
+                padding: 5px 10px;
+            }
+
+            #nav-header ul li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            #article-1 {
+                background-color: rgb(145, 30, 30);
+                margin: 0;
+                margin-bottom: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            #article-1-header {
+                margin: 0;
+                padding-bottom: 3px;
+                color: rgb(10, 10, 10)
+            }
+
+            #article-1-p {
+                font-size: large;
+            }
+
+            #section-articles ul {
+                text-decoration: none;
+                color: black;
+                font-size: large;
+                padding: 5px 10px;
+            }
+
+        </style> <!--Passo 2 - adicionar estilos-->
     </head>
-    <body> <!--Corpo do HTML. O body é onde terá todo o conteúdo da página que aparecerá em "destaque" ou como principal parte.-->
-        <header> <!--Cabeçalho da página-->
-            <h1>Title</h1>          
-            <h2>Subtitle</h2>
+    <body>
+        <header id="header1">
+            <h1 id="title">Judo Page</h1>          
+            <h2>An introduction to the fundamentals of Judo</h2>
+            <h4>Judo is a martial art created in Japan by Jigoro Kano - a man who dedicated his life to Physical Education and Martial Arts.</h4> <!--Passo 3.1 - parágrafo de introdução-->
+            <nav id="nav-header"> <!--Passo 3.2 - nav ajustado para dentro de header-->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="figures.html">Figures</a></li>
+                    <li><a href="techniques.html">Techniques</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav> <!--Área de navegação-->
-            <ul> <!--Utilizado o emmet ul>li*3>a[href="#"]{Link $} e modificado para maior adequação a necessidade. Frizo que o $ é utilizado para definir números sem necessidade de digitar tudo e aqui foi utilizado em ordem crescente-->
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/figure" target="_blank">MDN HTML</a></li>
-                <li><a href="https://www.youtube.com/watch?v=LMD6MqwErzc" target="_blank">Click Here!</a></li>
-            </ul>
-        </nav>
-        <main> <!--A real principal parte da página HTML-->
-            <article>
-                <h2>Article's Title</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis esse, officia odit ducimus aliquid, natus fugit suscipit necessitatibus similique laboriosam dolor enim assumenda repudiandae eos, quas amet commodi deleniti minus!</p>
+        <hr>
+        <main>
+            <section> <!--Passo 3.3 - parte confusa na atividade. a section com múltimídia deve estar dentro de header>nav? ficou confuso-->
+                <h1>Multimedia Section</h1>
+                <div>
+                    <p>Judo Fight at Doha's World Championships 2023</p>
+                    <iframe width="43%" height="500px" frameborder="0" src="https://www.youtube.com/embed/eIRAxPdfP4w"></iframe>
+                </div>
+                <br>
+                <div>
+                    <p>Judo's Technique Kata-Guruma</p>
+                    <video controls width="50%" height="500px">
+                        <source src="multimidia/kata-guruma.mp4" type="video/mp4">
+                        <p class="notice">Your browser doesn't support the MP4 video format.</p> <!--classe criada para estilizar os avisos-->
+                    </video>
+                </div>
+                <br>
+                <div>
+                    <h3>Just a song to relax. Nothing about Judo :p</h3>
+                    <audio controls> <!--Não tem a ver com judô mas eu amo essa música.-->
+                        <source src="multimidia/the-neighbourhood-reflections.mp3" type="audio/mpeg">
+                        <p class="notice">Your browser doesn't support the MP3 audio format.</p>
+                    </audio>
+                </div>
+            <hr>
+            </section>
+            <article id="article-1"> <!--vamos transformar o article em "body". mudanças feitas para ter um melhor estudo a respeito dessa tag-->
+                <header id="article-1-header">
+                    <h1>Article 1</h1>
+                    <h2>The History of Judo</h2>
+                    <p>Kids Web Japan</p>
+                </header>
+                <p id="article-1-p"><b>Judo</b> is a martial art that was born in Japan, and it is now known around the world as an Olympic sport. <b>Judo</b> was created in 1882 by combining jujutsu, a form of close combat, with elements of mental discipline. The roots of jujutsu lie in sumo. Sumo has a very long history and is even mentioned in the Kojiki (Records of Ancient Matters) from the year 712, which describes the history of Japan from the mythical age of the gods to the reign of Empress Suiko (554–628) and the Nihon Shoki (Chronicle of Japan), a document from 720 that describes the history of Japan from the age of the gods until the time of Empress Jito, who reigned from 690 to 697.</p>
+                <p>See more <a href="https://web-japan.org/kidsweb/virtual/judo/judo01.html" target="_blank">here</a>.</p>
+                <footer>
+                    <p>Published in June 13, 2024</p>
+                    <p><a href="https://web-japan.org/kidsweb/virtual/judo/judo01.html" target="_blank">Link to the real article.</a></p>
+                </footer>
             </article>
-            <section>
-                <h3>Section's Title</h3>
-                <ul> <!--ul>li*3-->
-                    <li>Lorem.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum dolor.</li>
+            <section id="section-articles">
+                <h3>More articles about Judo</h3>
+                <ul>
+                    <li><a href="https://www.ijf.org/news/show/through-judo-we-can-learn-to-have-a-better-life" target="_blank">Through Judo we Can Learn to Have a Better Life</a></li>
+                    <li><a href="https://www.ijf.org/news/show/the-art-of-change" target="_blank">The Art of Change</a></li>
+                    <li><a href="https://www.ijf.org/news/show/when-reality-is-brighter-than-a-dream" target="_blank">When Reality is Brighter Than a Dream</a></li>
                 </ul>
             </section>
         </main>
